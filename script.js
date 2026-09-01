@@ -94,14 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el) el.min = todayStr;
   });
 
-  // Funciones de Carrito
-  function openCart() {
-    if (cartDrawer) cartDrawer.classList.add('open');
+  function formatCLP(val) {
+    if (!val || val === "0" || val === 0) return "$000.000 CLP";
+    return '$' + Number(val).toLocaleString('es-CL') + ' CLP';
   }
 
-  function closeCart() {
-    if (cartDrawer) cartDrawer.classList.remove('open');
-  }
+  function openCart() { if (cartDrawer) cartDrawer.classList.add('open'); }
+  function closeCart() { if (cartDrawer) cartDrawer.classList.remove('open'); }
 
   if (cartToggle) cartToggle.addEventListener('click', openCart);
   if (cartClose) cartClose.addEventListener('click', closeCart);
@@ -111,12 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const id = btn.getAttribute('data-id');
       const title = btn.getAttribute('data-title');
+      const price = btn.getAttribute('data-price') || 0;
 
       const existing = cart.find(item => item.id === id);
       if (existing) {
         existing.qty += 1;
       } else {
-        cart.push({ id, title, qty: 1 });
+        cart.push({ id, title, price: parseInt(price, 10), qty: 1 });
       }
 
       updateCartUI();
@@ -145,12 +145,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let html = '';
+    let numericTotal = 0;
+    let hasCustomQuote = false;
+
     cart.forEach(item => {
+      if (item.price > 0) {
+        numericTotal += item.price * item.qty;
+      } else {
+        hasCustomQuote = true;
+      }
+
+      const priceDisplay = item.price > 0 ? formatCLP(item.price * item.qty) : '$000.000 CLP (Cotización)';
+
       html += `
         <div class="cart-item-row">
           <div>
             <strong style="color:var(--white-pure);">${item.title}</strong>
-            <div style="font-size:0.7rem; color:var(--white-60);">$000.000 CLP (Cotización) x ${item.qty}</div>
+            <div style="font-size:0.7rem; color:var(--rose-light);">${priceDisplay} x ${item.qty}</div>
           </div>
           <div style="text-align:right;">
             <button onclick="removeFromCart('${item.id}')" style="background:none;border:none;color:var(--rose-gold);cursor:pointer;font-size:0.7rem;">Eliminar</button>
@@ -160,7 +171,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cartItemsContainer.innerHTML = html;
-    if (cartTotalEl) cartTotalEl.textContent = '$000.000 CLP';
+    
+    if (numericTotal > 0 && !hasCustomQuote) {
+      if (cartTotalEl) cartTotalEl.textContent = formatCLP(numericTotal);
+    } else if (numericTotal > 0 && hasCustomQuote) {
+      if (cartTotalEl) cartTotalEl.textContent = `${formatCLP(numericTotal)} + Cotización`;
+    } else {
+      if (cartTotalEl) cartTotalEl.textContent = '$000.000 CLP';
+    }
   }
 
   window.removeFromCart = function(id) {
@@ -207,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const d2 = document.getElementById('dateOption2').value;
       const d3 = document.getElementById('dateOption3').value;
 
-      // Formatear fechas a legible (DD/MM/AAAA)
       function formatDate(dStr) {
         if (!dStr) return 'Sin especificar';
         const parts = dStr.split('-');
@@ -235,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
       hideLeadModal();
       leadForm.reset();
 
-      // Vaciar carrito si la solicitud vino del checkout del carrito
       if (cart.length > 0 && pendingBookingItems === cart) {
         cart = [];
         updateCartUI();
