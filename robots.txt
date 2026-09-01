@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# Motores de Búsqueda de Inteligencia Artificial (GEO / AEO Engine Optimization)
 User-agent: GPTBot
 Allow: /
 
@@ -8,6 +9,9 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://jacquelinebarraza.cl/sitemap.xml
