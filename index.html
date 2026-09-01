@@ -118,12 +118,14 @@
         </p>
         <div style="display:flex; gap:1rem; flex-wrap:wrap;">
           <a href="microblading-providencia.html" class="btn-gold">Ver Servicios & Reserva</a>
-          <a href="https://wa.link/2xsqzu" target="_blank" class="btn-outline-gold">Diagnóstico por Foto WhatsApp</a>
+          <button class="btn-outline-gold direct-book-btn" data-title="Evaluación General e Diagnóstico por Foto">
+            Diagnóstico por Foto WhatsApp
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- BLOQUE FORMATO GEO/AEO PARA MOTORES IA Y AUTOR PORTRAIT -->
+    <!-- BLOQUE FORMATO GEO/AEO PARA MOTORES IA -->
     <section class="section-padding" style="background:var(--surface-dark); border-bottom:1px solid var(--rose-border);">
       <div class="container">
         <div style="display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center;" class="grid-md-2">
@@ -143,61 +145,78 @@
       </div>
     </section>
 
-    <!-- CERTIFICACIONES Y STAMPS INTERACTIVOS PREVIEW -->
+    <!-- CATÁLOGO CON PRECIOS TIPO $000.000 CLP -->
     <section class="section-padding">
       <div class="container">
         <div style="text-align:center; max-width:700px; margin:0 auto 2.5rem;">
-          <span class="tag-luxury">E-E-A-T & Acreditación de Rigor</span>
-          <h2 class="h2-editorial">Insignias de Maestría Técnica</h2>
-          <p style="font-size:0.85rem; color:var(--white-60); margin-top:0.5rem;">Toca cualquier insignia para ver el impacto clínico y técnico en tu resultado.</p>
+          <span class="tag-luxury">Procedimientos de Autor</span>
+          <h2 class="h2-editorial">Servicios & Formación</h2>
+          <div style="width:3rem; height:2px; background:var(--rose-gold); margin:0.75rem auto;"></div>
         </div>
 
-        <div class="stamps-grid">
-          <article class="stamp-card" onclick="openCertModal('phibrows')">
-            <span class="stamp-badge-type">Rango Élite · PhiAcademy</span>
-            <h3 class="stamp-title">PhiBrows Royal Artist</h3>
-            <img src="566639218_18071938880233590_6565109749655810072_n.jpg" alt="PhiBrows Royal Certificate" class="stamp-preview-img">
-            <p style="font-size:0.75rem; color:var(--white-60);">CM1637191961JB21734W</p>
-            <div class="stamp-cta-tap">Ver detalle técnico →</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1.8rem;">
+          <article style="background:var(--surface-card); border:1px solid var(--rose-border); border-radius:1rem; padding:2rem; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span class="tag-luxury">Cejas · Microblading</span>
+              <h3 class="font-serif" style="font-size:1.25rem; color:#FFF; margin-bottom:0.5rem;">Microblading & Latinbrows Signature</h3>
+              <p style="font-size:0.85rem; color:var(--white-60); line-height:1.7; margin-bottom:1.5rem;">
+                Técnica híper-realista de diseño de cejas adaptada a la morfología facial. Pigmentos de alta fidelidad sin virajes de tono a gris.
+              </p>
+            </div>
+            <div>
+              <p style="font-size:1.3rem; font-weight:800; color:var(--rose-gold); margin-bottom:1rem;">
+                $000.000 CLP <span style="display:block; font-size:0.7rem; color:var(--white-60); font-weight:400;">Cotización personalizada vía WhatsApp</span>
+              </p>
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <button class="btn-outline-gold add-to-cart-btn" data-id="1" data-title="Microblading & Latinbrows Signature" style="width:100%;">Agregar al Carrito</button>
+                <button class="btn-gold direct-book-btn" data-title="Microblading & Latinbrows Signature" style="width:100%;">Agendar por WhatsApp</button>
+              </div>
+            </div>
           </article>
 
-          <article class="stamp-card" onclick="openCertModal('boldbrows')">
-            <span class="stamp-badge-type">Rango Élite · PhiAcademy</span>
-            <h3 class="stamp-title">BoldBrows Royal Artist</h3>
-            <img src="571491049_18342428419207969_8986666842886361263_n.jpg" alt="BoldBrows Royal Certificate" class="stamp-preview-img">
-            <p style="font-size:0.75rem; color:var(--white-60);">CM1666009510JB34747W</p>
-            <div class="stamp-cta-tap">Ver detalle técnico →</div>
+          <article style="background:var(--surface-card); border:1px solid var(--rose-border); border-radius:1rem; padding:2rem; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span class="tag-luxury">Labios · Acuarela Lips</span>
+              <h3 class="font-serif" style="font-size:1.25rem; color:#FFF; margin-bottom:0.5rem;">Micropigmentación Labial (Acuarela Lips)</h3>
+              <p style="font-size:0.85rem; color:var(--white-60); line-height:1.7; margin-bottom:1.5rem;">
+                Perfilado y saturación sutil para devolver tono natural, simetría y volumen óptico a los labios.
+              </p>
+            </div>
+            <div>
+              <p style="font-size:1.3rem; font-weight:800; color:var(--rose-gold); margin-bottom:1rem;">
+                $000.000 CLP <span style="display:block; font-size:0.7rem; color:var(--white-60); font-weight:400;">Cotización personalizada vía WhatsApp</span>
+              </p>
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <button class="btn-outline-gold add-to-cart-btn" data-id="2" data-title="Micropigmentación Labial (Acuarela Lips)" style="width:100%;">Agregar al Carrito</button>
+                <button class="btn-gold direct-book-btn" data-title="Micropigmentación Labial (Acuarela Lips)" style="width:100%;">Agendar por WhatsApp</button>
+              </div>
+            </div>
           </article>
 
-          <article class="stamp-card" onclick="openCertModal('latinbrows')">
-            <span class="stamp-badge-type">Rango Élite · PhiAcademy</span>
-            <h3 class="stamp-title">LatinBrows Royal Artist</h3>
-            <img src="574268951_18324528610245441_3167207847751632046_n.jpg" alt="LatinBrows Royal Certificate" class="stamp-preview-img">
-            <p style="font-size:0.75rem; color:var(--white-60);">CH1680628206JB40011W</p>
-            <div class="stamp-cta-tap">Ver detalle técnico →</div>
+          <article style="background:var(--surface-card); border:1px solid var(--rose-border); border-radius:1rem; padding:2rem; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span class="tag-luxury">JB Academy · Formación</span>
+              <h3 class="font-serif" style="font-size:1.25rem; color:#FFF; margin-bottom:0.5rem;">Latex Day Presencial (8 Horas)</h3>
+              <p style="font-size:0.85rem; color:var(--white-60); line-height:1.7; margin-bottom:1.5rem;">
+                Taller práctico de 8 horas en Providencia. Calibración directa de presión, ángulo y precisión de aguja en látex.
+              </p>
+            </div>
+            <div>
+              <p style="font-size:1.3rem; font-weight:800; color:var(--rose-gold); margin-bottom:1rem;">
+                $000.000 CLP <span style="display:block; font-size:0.7rem; color:var(--white-60); font-weight:400;">Cupos limitados por convocatoria</span>
+              </p>
+              <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                <button class="btn-outline-gold add-to-cart-btn" data-id="3" data-title="JB Academy: Latex Day Presencial" style="width:100%;">Agregar al Carrito</button>
+                <button class="btn-gold direct-book-btn" data-title="JB Academy: Latex Day Presencial" style="width:100%;">Inscribirme por WhatsApp</button>
+              </div>
+            </div>
           </article>
         </div>
-
-        <div style="text-align:center; margin-top:2.5rem;">
-          <a href="certificaciones.html" class="btn-outline-gold">Ver Todas las Certificaciones & Diplomas</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN PREMIOS DESTACADOS -->
-    <section class="section-padding" style="background:var(--surface-dark); border-top:1px solid var(--rose-border);">
-      <div class="container text-center">
-        <span class="tag-luxury">Reconocimientos de Jerarquía</span>
-        <h2 class="h2-editorial">Campeona Internacional WinArt 2026</h2>
-        <p style="font-size:0.9rem; color:var(--white-60); max-width:680px; margin:0.8rem auto 2rem;">
-          Evaluada en vivo por jueces internacionales sobre modelo real. Precisión, implantación de pigmento e higiene clínica de primer nivel.
-        </p>
-        <a href="premios.html" class="btn-gold">Conoce la Trayectoria y Galardones</a>
       </div>
     </section>
 
     <!-- UBICACIÓN & FICHA GOOGLE BUSINESS -->
-    <section class="section-padding">
+    <section class="section-padding" style="background:var(--surface-dark);">
       <div class="container text-center">
         <span class="tag-luxury">Ubicación & Citas</span>
         <h2 class="h2-editorial">Estudio Principal en Providencia</h2>
@@ -209,14 +228,6 @@
       </div>
     </section>
   </main>
-
-  <!-- MODAL DE CERTIFICACIONES -->
-  <div id="certModal" class="cert-modal">
-    <div class="cert-modal-content">
-      <button class="cert-modal-close" onclick="closeCertModal()">&times;</button>
-      <div id="certModalBody"></div>
-    </div>
-  </div>
 
   <footer style="border-top:1px solid var(--rose-border); padding:3rem 0; text-align:center; background:#040404;">
     <p style="font-size:0.8rem; color:var(--white-60);">Jacqueline Barraza · Studio & Master Academy</p>
@@ -232,64 +243,12 @@
       </div>
       <div class="cart-body" id="cartItems"></div>
       <div class="cart-footer">
-        <p style="margin-bottom:0.75rem; font-size:0.85rem;">Total Estimado: <strong id="cartTotal" style="color:var(--rose-gold);">$0 CLP</strong></p>
+        <p style="margin-bottom:0.75rem; font-size:0.85rem;">Total Estimado: <strong id="cartTotal" style="color:var(--rose-gold);">$000.000 CLP</strong></p>
         <button class="btn-gold" id="checkoutBtn" style="width:100%;">Enviar Reserva a WhatsApp</button>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
-  <script>
-    const certDetails = {
-      phibrows: {
-        title: "PhiBrows Royal Artist",
-        code: "CM1637191961JB21734W",
-        date: "17 de Noviembre de 2021",
-        image: "566639218_18071938880233590_6565109749655810072_n.jpg",
-        whatIs: "Es el estándar máximo global en Microblading hiperrealista pelo a pelo. Exige superar 12 niveles estrictos de simetría facial con compás áureo.",
-        whyPro: "Garantiza a la clienta trazos hiperfinos que siguen exactamente el patrón de crecimiento del pelo natural, sin riesgo de migración de pigmento ni cicatrices."
-      },
-      boldbrows: {
-        title: "BoldBrows Royal Artist",
-        code: "CM1666009510JB34747W",
-        date: "17 de Octubre de 2022",
-        image: "571491049_18342428419207969_8986666842886361263_n.jpg",
-        whatIs: "Técnica avanzada de trazo voluminoso y curvo que simula cejas despeinadas, hiper-naturales y con efecto multidimensional.",
-        whyPro: "Permite trabajar rostros modernos que buscan alejarse de la ceja plana tradicional, adaptando cada trazo a la estructura del hueso frontal."
-      },
-      latinbrows: {
-        title: "LatinBrows Royal Artist",
-        code: "CH1680628206JB40011W",
-        date: "04 de Abril de 2023",
-        image: "574268951_18324528610245441_3167207847751632046_n.jpg",
-        whatIs: "La fusión maestra entre el Microblading pelo a pelo y el sombreado sutil con dermógrafo (Powder Brows).",
-        whyPro: "Es la solución definitiva para pieles mixtas o grasas donde el microblading puro no retiene con facilidad. Otorga cuerpo sin perder naturalidad."
-      }
-    };
-
-    function openCertModal(key) {
-      const data = certDetails[key];
-      if(!data) return;
-      document.getElementById('certModalBody').innerHTML = `
-        <span class="tag-luxury">Ficha de Verificación Técnica</span>
-        <h2 class="font-serif" style="font-size:1.4rem; color:#FFF; margin-bottom:0.3rem;">${data.title}</h2>
-        <p style="font-size:0.75rem; color:var(--rose-gold); margin-bottom:1rem;">Código de Autenticidad: ${data.code} · ${data.date}</p>
-        <img src="${data.image}" style="width:100%; border-radius:0.5rem; border:1px solid var(--rose-border); margin-bottom:1.2rem;">
-        <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:1rem; border-radius:0.5rem; margin-bottom:0.8rem;">
-          <strong style="font-size:0.78rem; color:var(--rose-gold); display:block; margin-bottom:0.2rem;">¿QUÉ REPRESENTA ESTA CERTIFICACIÓN?</strong>
-          <p style="font-size:0.82rem; color:var(--white-90);">${data.whatIs}</p>
-        </div>
-        <div style="background:var(--rose-gold-subtle); border:1px solid var(--rose-border); padding:1rem; border-radius:0.5rem;">
-          <strong style="font-size:0.78rem; color:var(--rose-gold); display:block; margin-bottom:0.2rem;">¿CÓMO HACE A JACQUELINE MÁS MÁSTER?</strong>
-          <p style="font-size:0.82rem; color:var(--white-90);">${data.whyPro}</p>
-        </div>
-      `;
-      document.getElementById('certModal').classList.add('active');
-    }
-
-    function closeCertModal() {
-      document.getElementById('certModal').classList.remove('active');
-    }
-  </script>
 </body>
 </html>
